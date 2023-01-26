@@ -1,0 +1,20 @@
+<header>
+    <div style="background-color:purple;" class="navbar navbar-transparent shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            🎓
+            <strong style="font-size: 30px;"><a style="text-decoration:none;color:rgb(249, 153, 75);" routerLink="/products">ED-CARE</a></strong>
+            <div class="from-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search">
+            </div>
+            <!-- <span class="fas fa-search search-icon"></span> -->
+            <strong ><a style="text-decoration:none;color:white;" routerLink="/subcription">&nbsp; ✨SUBSCRIPTION</a></strong>
+            <strong ><a style="text-decoration:none;color:white;" routerLink="/aboutus">&nbsp; 👩🏼‍🏫ABOUT US</a></strong>
+            <strong ><a style="text-decoration:none;color:white;" routerLink="/help">&nbsp;💡HELP</a></strong>
+            <strong ><a style="text-decoration:none;color:white;" routerLink="/login">&nbsp;🗝️LOGIN</a></strong>
+        </div>
+        <button routerLink="carts" class="btn bg-transparent">
+            <i style="font-size: 30px; color: rgb(248, 207, 26);" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+</header>

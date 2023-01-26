@@ -1,0 +1,131 @@
+<div class="container">
+    <div class="row mt-4 bg-info">
+        <div class="col-md-6 mt-3">
+          
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.nitdit.com/wp-content/uploads/2021/02/Expand-Your-Knowledge.png" class="card-img-top" alt="pic">
+                <div class="card-body">
+                  <h3>SSC All COURSE</h3>
+                  <h5 class="card-title">One Months</h5>
+                  <h4 class="card-text">Price: 10000$</h4>
+                  <p>This course available for one month in your account</p>
+                  <input type="button" class="btn btn-primary mb-3" value="Subscribe" (click)="subs1()"/><br>
+
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mb-2 mt-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.nitdit.com/wp-content/uploads/2021/02/Expand-Your-Knowledge.png" class="card-img-top" alt="pic">
+                <div class="card-body">
+                  <h3>JSC All COURSE</h3>
+                  <h5 class="card-title">Two Months</h5>
+                  <h4 class="card-text">Price: 8000$</h4>
+                  <p>This course available for 2wo month in your account</p>
+                   <input type="button" class="btn btn-primary mb-3" value="Subscribe" (click)="subs2()"/><br>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-5">
+      <h1>Subcription</h1>
+      <form #productsForm="ngForm" (ngSubmit)="onProductCreate(productsForm.value)">
+               
+        <label class="form-label mb-3" >Name</label>
+        <input type="text" class="form-control" name="name"  ngModel>
+    
+      
+     
+          <label class="form-label" >Mobile</label>
+          <input type="text" class="form-control" name="mobile"   ngModel>
+      
+       
+       
+            <label class="form-label" >Address</label>
+            <input type="text" class="form-control" name="address"   ngModel>
+        
+         
+<!--           
+              <label class="form-label" >Course Name</label>
+              <input type="text" class="form-control" name="productName" [(ngModel)]="cAll"  ngModel> -->
+
+
+              <label class="form-label" >Subscription Package</label>
+              <input type="text" class="form-control" name="cls" [(ngModel)]="spackage" [(ngModel)]="spackage" ngModel>
+          
+            
+         
+                <label class="form-label" >Date</label>
+                <input type="text" class="form-control" name="date"   ngModel>
+            
+              
+    
+          <label class="form-label" >Quantity</label>
+          <input type="number" class="form-control"  name="productQantity" [(ngModel)]="quantity"  ngModel>
+      
+        
+     
+          <label  class="form-label md-3" >Total</label>
+          <input type="number" class="form-control" name="total" [(ngModel)]="total" ngModel>
+      
+       
+   
+    <input type="submit"  class="btn btn-primary mt-3" value="Payment Completed" /><br>
+    
+</form>
+<div class="text-center">
+  <label for="payment"><strong>Payment Method : &nbsp; &nbsp; </strong></label>
+<select name="payment" id="payment" style="background-color: rgb(240, 189, 159); width: 200px;">
+  <optgroup label="Mobile">
+    <option value="Bkash">Bkash</option>
+    <option value="Rocket">Rocket</option>
+  </optgroup>
+  <optgroup label="Banking">
+    <option value="Card">Card</option>
+    <option value="Other">Other</option>
+  </optgroup>
+</select>
+</div>
+<div class="text-center mt-2">
+  <h3  style="color: rgb(2, 5, 0);background-color: rgb(255, 123, 0);border-radius: 10px;">{{msg}}</h3>
+</div>
+
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-5">
+     
+        <h1>Subcription Calculation</h1>
+                      <label class="form-label" >Payment</label>
+                      <input type="number" class="form-control"   [(ngModel)]="total">
+                  
+                  
+                  
+                        <label class="form-label" >Week</label>
+                        <input type="number" class="form-control"   [(ngModel)]="week">
+                    
+                      
+                
+                      <label class="form-label" >Per Week</label>
+                      <input type="number" class="form-control"   [(ngModel)]="perweek">
+<!--                       
+                      <label class="form-label" >Paid Ammount</label>
+                      <input type="number" class="form-control"   [(ngModel)]="perweek">
+                  
+              
+                   
+                        <label  class="form-label" >Due Ammount </label>
+                        <input type="number" class="form-control"  [(ngModel)]="due"> -->
+                      
+    
+      
+    
+  </div>
+              
+                  
+</div>

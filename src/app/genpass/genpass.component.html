@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-md-5 shadow" style="background-color: rgb(216, 206, 197);border-radius: 20px;">
+      
+        <div class="text-center" >
+          <div>
+            <h5 class="text-danger">{{msg}}</h5>
+          </div>
+          <h2>Package Login</h2>
+        </div>
+            <!-- <form #gerePass="ngForm" (ngSubmit)="genPass()">
+        
+              <label class="form-label mb-3">Email</label>
+              <input type="text" class="form-control" name="name" [(ngModel)]="user.email">
+            
+            
+              <label class="form-label">Password</label>
+              <input type="text" class="form-control" name="mobile" [(ngModel)]="user.password">
+              <input type="submit" class="btn btn-primary mt-3" value="Login for Package" />
+            </form> -->
+
+            <form #gerePass="ngForm" (ngSubmit)="genPassPac()">
+        
+              <label class="form-label mb-3">Username</label>
+              <input type="text" class="form-control" name="email" [(ngModel)]="user2.email">
+            
+            
+              <label class="form-label">Password</label>
+              <input type="text" class="form-control" name="password" [(ngModel)]="user2.password">
+              <label class="form-label">Class</label>
+              <input type="text" class="form-control" name="cls" [(ngModel)]="user2.cls">
+              <label class="form-label">Subject</label>
+              <input type="text" class="form-control" name="sub" [(ngModel)]="user2.sub">
+              <input type="submit" class="btn btn-primary mt-3 mb-2" value="Login for Package" />
+            </form>
+    </div>
+    <div class="col-md-2 text-center">
+      <h1><strong>🔐</strong></h1>
+    </div>
+    <div class="col-md-5 shadow" style="background-color: burlywood;border-radius: 20px;">
+      <div>
+        <h5 class="text-danger text-center">{{msg2}}</h5>
+      </div>
+      <h2>Subscription Login</h2>
+      <form #gerePassSub="ngForm" (ngSubmit)="genPassSub()">
+        
+        <label class="form-label mb-3">Username</label>
+              <input type="text" class="form-control" name="name" [(ngModel)]="user1.email">
+            
+            
+              <label class="form-label">Password</label>
+              <input type="text" class="form-control" name="mobile" [(ngModel)]="user1.password">
+
+              <label class="form-label">Subscription Package Name</label>
+              <input type="text" class="form-control" name="clas" [(ngModel)]="user1.cls">
+
+              <input type="submit" class="btn btn-primary mt-3 mb-3" value="Login for Subscription" />
+      
+      </form>
+    </div>
+  </div>
+
+</div>
+

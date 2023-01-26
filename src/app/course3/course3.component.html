@@ -1,0 +1,20 @@
+<p style="margin-left: 90%;"><strong><a style="text-decoration: none ;" href="/products">Log Out</a></strong></p>
+<div class="card-top container-fluid" style="margin: 20px; padding:20px;">
+
+</div>
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">JSC 📚 BANGLA</h1>
+        
+        <ng-container *ngFor="let item of moduleList">
+            <div class="card col-md-3">
+                <video width="260" height="180" controls>
+                    <source src="{{item.vid}}" type="video/mp4">
+                  </video>
+                  <h4>{{item.title}}</h4>
+                  <p>{{item.des}}</p>
+            </div>
+        </ng-container>
+        
+    </div>
+</div>

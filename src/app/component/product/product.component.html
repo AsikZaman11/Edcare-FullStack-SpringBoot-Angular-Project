@@ -1,0 +1,55 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex mt-2" style="background-color:rgb(247, 18, 151);border-radius: 20px;color: rgb(208, 255, 0);">
+       
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://badge.kindness.sg/wp-content/uploads/2018/02/icon-about.png" height="40px" width="40px" alt="">
+           <h6>All Class</h6>
+            </a>    
+        </div>
+        <div class="item">   
+            <a (click)="filter('JSC')">
+                <img src="https://cdn4.iconfinder.com/data/icons/education-sticker-icons-part-1/202/Graduate_Student-512.png" height="40px" width="40px" alt="">
+           <h6>JSC</h6>
+            </a>
+        </div>
+        <div class="item">  
+            <a (click)="filter('SSC')">
+                <img src="https://cdn4.iconfinder.com/data/icons/education-59/128/graduates-512.png" height="40px" width="40px" alt="">
+           <h6>SSC</h6>
+            </a> 
+        </div>
+        <div class="item">       
+            <a (click)="filter('HSC')">
+            <img src="https://cdn2.iconfinder.com/data/icons/education-science-flat/2048/Convocation-512.png" height="40px" width="40px" alt="">
+       <h6>HSC</h6>
+        </a>
+
+        </div>
+    </div>
+    
+</div>
+<div class="container text-center mt-2">
+    <p><strong style="color: purple;">{{addtocartmsg}}</strong></p>
+</div>
+
+<div class="container">
+    <div class="row">
+    <ng-container *ngFor=" let item of filterCatagory |filter:searchkey:'title'">
+    <!-- <ng-container *ngFor=" let item of productList |filter:searchkey:'title'"> -->
+        <div class="card col-md-3" style="background-color: rgb(129, 20, 238); color: rgb(7, 241, 198);">
+            <img  src="{{item.image}}" alt="image">
+            <h5 style="white-space:nowarp; overflow:hidden; text-overflow:ellipsis;max-width:100ch;"
+            >{{item.title}}</h5>
+            <p style="white-space:nowarp; overflow:hidden; text-overflow:ellipsis;max-width:100ch;">{{item.description}}</p>
+            <p>{{item.catagory}}</p>
+            <p><strong style="color: rgb(248, 247, 249);">Price:{{item.price}}</strong>$</p>
+            
+            <button class="btn btn-warning" (click)=addToCart(item)>Add To Cart</button>
+        </div>
+    </ng-container>
+    </div>
+</div>
+
+
+
